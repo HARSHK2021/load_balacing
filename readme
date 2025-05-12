@@ -1,0 +1,41 @@
+# 🌀 SmartBalancer – Load Balancer with Consistent Hashing in Node.js
+
+This is a simple demo project that simulates a **load balancer** using **consistent hashing** to distribute incoming HTTP requests across multiple backend servers.
+
+## 🚀 Features
+
+- 🔁 Consistent hashing ensures "sticky" routing (same user → same server).
+- 📦 Lightweight setup with native `http`, `http-proxy`, and `hashring`.
+- 🧪 Great for learning and prototyping scalable architectures.
+
+---
+
+## 🧱 Folder Structure
+smart-balancer/
+├── load-balancer.js # Load balancer with consistent hashing
+├── server1.js # Backend server 1 (port 3001)
+├── server2.js # Backend server 2 (port 3002)
+├── server3.js # Backend server 3 (port 3003)
+├── package.json
+└── README.md
+
+## 📦 Installation
+git clone https://github.com/yourusername/smart-balancer.git
+cd smart-balancer
+npm install
+
+▶️ Running the Project
+In separate terminals, run:
+node server1.js
+node server2.js
+node server3.js  each server listens on ports 3001, 3002, and 3003 respectively.
+
+Start the Load Balancer
+In a new terminal, run:
+node load-balancer.js
+
+
+Open your browser:
+http://localhost:8000/user1
+http://localhost:8000/user2
+http://localhost:8000/user1
